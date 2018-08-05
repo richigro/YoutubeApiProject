@@ -1,1 +1,6 @@
-alert("connected to index.js");
+function generateThumbnail() {
+    return 
+    `
+    
+    `;
+}

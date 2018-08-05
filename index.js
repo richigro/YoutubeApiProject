@@ -1,0 +1,1 @@
+alert("connected to index.js");

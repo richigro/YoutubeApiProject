@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  .video-container {
+    background-color: pink;
+    height: 700px;
+    width: 100%;
+  }
+  
+  .search-section > h1 {
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    margin-right: 20px; 
+  }
+  
+  .search-section {
+    background-color: rgba(35, 35, 35, 0.85);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .thumbnail {
+    color: aliceblue;
+    width: 230px;
+    height: 217px;
+    background-color: black;
+    float: left;
+    margin: 8px 4px;
+    /* padding: 7px; */
+    /* clear: both; */
+    
+  }
+  
+  .thumbnail > h1 {
+    padding: 5px 3px;
+    font-size: 13px;
+  }
+  
+  .thumbnail > img {
+    width: 100%;
+    
+  }
+  .thumbnail p {
+    font-size: 12px;
+    padding: 5px;
+  }
+  
+  .video-view {
+    width: 100%;
+    margin: 0 auto;
+    background-color: gray;
+  }
+  .video {
+    display: block;
+    
+    margin: 0 auto;
+  }

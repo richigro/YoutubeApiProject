@@ -11,14 +11,12 @@ function addToPage(video) {
 
 function renderVideoThumbnail(data) {
   return `
-    <a href="https://www.youtube.com/embed/${data.id.videoId}" target="_blank">
-      <div class="js-thumbnail    thumbnail">
+      <div id="${data.id.videoId}" class="js-thumbnail    thumbnail">
         <img clas="js-img" src="${data.snippet.thumbnails.medium.url}" alt="">
         <h1>${data.snippet.title}</h1>
         <p>${data.snippet.channelTitle}</p>
         <p>${data.snippet.publishedAt}</p>
       </div>
-    </a>
   `;
 }
 
@@ -62,7 +60,7 @@ function search(){
 function viewingPage(id) {
   return `
     <div class="video-view" >
-        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/${1}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div> 
   
   `;
@@ -76,7 +74,7 @@ function goToVideo() {
   $(".js-main").on("click", ".js-thumbnail", (event) => {
     // open another page with tagret url
     // remove video on page
-    console.log($(this).parent());
+    console.log($(this).parent().parent().html());
     removeLastView();
      // render new view
     addToPage(viewingPage());

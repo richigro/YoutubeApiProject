@@ -12,7 +12,7 @@ function addToPage(video) {
 function renderVideoThumbnail(data) {
   return `
       <div id="${data.id.videoId}" class="js-thumbnail    thumbnail">
-        <img clas="js-img" src="${data.snippet.thumbnails.medium.url}" alt="">
+        <img class="js-img" src="${data.snippet.thumbnails.medium.url}" alt="${data.snippet.title}">
         <h1>${data.snippet.title}</h1>
         <p>${data.snippet.channelTitle}</p>
         <p>${data.snippet.publishedAt}</p>
@@ -74,10 +74,10 @@ function goToVideo() {
   $(".js-main").on("click", ".js-thumbnail", (event) => {
     // open another page with tagret url
     // remove video on page
-    console.log($(this).parent().parent().html());
+    let videoId = event.target.parentElement.getAttribute("id");
     removeLastView();
      // render new view
-    addToPage(viewingPage());
+    addToPage(viewingPage(videoId));
   });
 }
 

@@ -11,12 +11,14 @@ function addToPage(video) {
 
 function renderVideoThumbnail(data) {
   return `
-    <div id="${data.id.videoId}" class="js-thumbnail thumbnail">
+    <a href="https://www.youtube.com/embed/${data.id.videoId}" target="_blank">
+      <div class="js-thumbnail    thumbnail">
         <img clas="js-img" src="${data.snippet.thumbnails.medium.url}" alt="">
         <h1>${data.snippet.title}</h1>
         <p>${data.snippet.channelTitle}</p>
         <p>${data.snippet.publishedAt}</p>
       </div>
+    </a>
   `;
 }
 
@@ -40,10 +42,6 @@ function printResult(data) {
 
 }
 
-
-
-
-
 function search(){
   let userQuery = "";
   $("button").click(function(event) {
@@ -51,6 +49,7 @@ function search(){
     removeLastView();
 
     userQuery = $('input[type="text"]').val();
+   // clear text field
     $('input[type="text"]').val("");
     
     // get yOutube data from api 
@@ -63,7 +62,7 @@ function search(){
 function viewingPage(id) {
   return `
     <div class="video-view" >
-        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/${$(".js-thumbnail").attr("id")}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/${1}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div> 
   
   `;
@@ -77,7 +76,7 @@ function goToVideo() {
   $(".js-main").on("click", ".js-thumbnail", (event) => {
     // open another page with tagret url
     // remove video on page
-    console.log($(event.target));
+    console.log($(this).parent());
     removeLastView();
      // render new view
     addToPage(viewingPage());

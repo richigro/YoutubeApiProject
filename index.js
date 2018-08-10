@@ -28,7 +28,8 @@ function getDataFromApi(searchTerm, callback) {
   const query = {
     part: 'snippet',
     key: apiKey,
-    q: `${searchTerm}`
+    q: `${searchTerm}`,
+    maxResults: 25
   }
   $.getJSON(url, query, callback);
 }

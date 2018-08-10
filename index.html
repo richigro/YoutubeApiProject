@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -7,46 +7,92 @@
     <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+
     <header class="search-section" role="banner">
       <h1>YoutubeApi</h1>
-      <input type="text">
-      <button>Search</button>
+      <input type="text" placeholder="Search" autofocus aria-label="search">
+      <button role="button" aria-label="search">Search</button>
     </header>
-    <main aria-live="assertive" class="js-main" class="video-container" role="main">
+
+    <main aria-live="passive" class="js-main search-results" role="main">
+      <h1 class="recommended">Recommended: </h1>
       
-      
-      <!-- <div class="video-view" >
-        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/PDZcqBgCS74" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>  
-       -->
-      
-      <!-- <div class="thumbnail">
-        <img src="https://i.ytimg.com/vi/VUXA5I6cbW8/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLDBhfFhlHldvx8ue5f13WjIW04pRA" alt="#">
-        <h1>Asking A Millionaire How To Get Started?!? Tanner J Fox</h1>
-        <p>Ricky Gutierrez</p>
-        <p>8,987 views . 2 months</p>
+      <div id="UKYcokpCgPU" class="js-thumbnail thumbnail">
+        <div class="thumbnail-img-container">
+          <img class="js-img thumbnail-img" src="https://i.ytimg.com/vi/UKYcokpCgPU/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLCbW8mL-3BVMf53IhQedqKxChSDyA" alt="" />
+        </div>
+        <div class="thumbnail-info">
+          <h1>Gagman style</h1>
+          <p>yooojocker ftw   2.4k views    2 years ago</p>
+          <p>Plzzz kante subscribe and like thxxx.</p>
+        </div>  
       </div>
 
-      <div class="thumbnail">
-        <img src="https://i.ytimg.com/vi/VUXA5I6cbW8/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLDBhfFhlHldvx8ue5f13WjIW04pRA" alt="#">
-        <h1>Asking A Millionaire How To Get Started?!? Tanner J Fox</h1>
-        <p>Ricky Gutierrez</p>
-        <p>8,987 views . 2 months</p>
+      <div id="09R8_2nJtjg" class="js-thumbnail thumbnail">
+        <div class="thumbnail-img-container">
+          <img class="js-img thumbnail-img" src="https://i.ytimg.com/vi/09R8_2nJtjg/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLD2Epj0uZGnhZhCfUPdUxz98ZYDIQ" alt="" />
+        </div>
+        <div class="thumbnail-info">
+          <h1>Maroon 5 - Sugar</h1>
+          <p>Maroon5   2.7B views    3 years ago</p>
+          <p>Buy Sugar on iTunes: http://smarturl.it/M5V Sign up for updates: http://smarturl.it/</p>
+        </div>  
       </div>
 
-      <div class="thumbnail">
-        <img src="https://i.ytimg.com/vi/VUXA5I6cbW8/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLDBhfFhlHldvx8ue5f13WjIW04pRA" alt="#">
-        <h1>Asking A Millionaire How To Get Started?!? Tanner J Fox</h1>
-        <p>Ricky Gutierrez</p>
-        <p>8,987 views . 2 months</p>
+      <div id="WDswiT87oo8" class="js-thumbnail thumbnail">
+        <div class="thumbnail-img-container">
+          <img class="js-img thumbnail-img" src="https://i.ytimg.com/vi/WDswiT87oo8/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLCWbHvEt1-BzDDi1aABZgTGQlu35A" alt="" />
+        </div>
+        <div class="thumbnail-info">
+          <h1>Blur - Girls And Boys</h1>
+          <p>emimusic   22M views    9 years ago</p>
+          <p>Blur 21 -- Celebrating 21 years of Blur. To find out more, click here: http://smarturl.it/blur21y </p>
+        </div>  
       </div>
 
-      <div class="thumbnail">
-        <img src="https://i.ytimg.com/vi/VUXA5I6cbW8/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLDBhfFhlHldvx8ue5f13WjIW04pRA" alt="#">
-        <h1>Asking A Millionaire How To Get Started?!? Tanner J Fox</h1>
-        <p>Ricky Gutierrez</p>
-        <p>8,987 views . 2 months</p>
-      </div> -->
+      <div id="UprcpdwuwCg" class="js-thumbnail thumbnail">
+        <div class="thumbnail-img-container">
+          <img class="js-img thumbnail-img" src="https://i.ytimg.com/vi/UprcpdwuwCg/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLDT7Y0oooel7sHiBUOTdldfdEKkWA" alt="" />
+        </div>
+        <div class="thumbnail-info">
+          <h1>twenty one pilots: Heathens (from Suicide Squad: The Album) [OFFICIAL VIDEO]</h1>
+          <p>Fueled By Rammen   1B views    2 years ago</p>
+          <p>twenty one pilots music video for 'Heathens' from Suicide Squad: The Album available now on Atlantic Records. Get it on iTunes:&nbsp;..</p>
+        </div>  
+      </div>
+
+      <div id="mOKqNxN4jWM" class="js-thumbnail thumbnail">
+        <div class="thumbnail-img-container">
+          <img class="js-img thumbnail-img" src="https://i.ytimg.com/vi/mOKqNxN4jWM/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLDUsvVyYL-kHbqvXhZ7VQuIkQW70A" alt="" />
+        </div>
+        <div class="thumbnail-info">
+          <h1>DJ Snake - Middle ft. Bipolar Sunshine</h1>
+          <p>Dj Snake   232M views    2 years ago</p>
+          <p>Listen to Encore, out now on Spotify: http://smarturl.it/EncoreDJSnake.sp Get</p>
+        </div>  
+      </div>
+
+      <div id="MIuJVYNvC-s" class="js-thumbnail thumbnail">
+        <div class="thumbnail-img-container">
+          <img class="js-img thumbnail-img" src="https://i.ytimg.com/vi/MIuJVYNvC-s/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLBMsonorxi0tbuKk4jizEkxnhhEnQ" alt="" />
+        </div>
+        <div class="thumbnail-info">
+          <h1>DJ Snake, AlunaGeorge - You Know You Like It (Audio)</h1>
+          <p>Dj Snake  55M views    3 years ago</p>
+          <p>Download “You Know You Like It”: iTunes: http://smarturl.it/YKYLI Google Play </p>
+        </div>  
+      </div>
+
+      <div id="a5uQMwRMHcs" class="js-thumbnail thumbnail">
+        <div class="thumbnail-img-container">
+          <img class="js-img thumbnail-img" src="https://i.ytimg.com/vi/a5uQMwRMHcs/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&amp;rs=AOn4CLCvc29-rnLwWr07WlXotDpig9pwrQ" alt="" />
+        </div>
+        <div class="thumbnail-info">
+          <h1>Daft Punk - Instant Crush (Video) ft. Julian Casablancas</h1>
+          <p>Daft Punk   223M views    4 years ago</p>
+          <p>tDaft Punk's official music video for 'Instant Crush' ft. Julian Casablancas. Click to listen to Daft Punk on Spotify:&nbsp</p>
+        </div>  
+      </div>
 
     </main>  
     <script
